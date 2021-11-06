@@ -9,12 +9,16 @@
     "lint-autofix": "next lint --fix"
   },
   "dependencies": {
+    "leaflet": "^1.7.1",
+    "ml-conrec": "^3.2.1",
     "next": "12.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-leaflet": "^3.2.2",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.7.5",
     "@types/node": "16.11.6",
     "@types/react": "17.0.34",
     "@types/styled-components": "^5.1.15",

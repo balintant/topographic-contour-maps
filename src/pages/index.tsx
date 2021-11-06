@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styled from 'styled-components'
-import Map from '@/components/Map'
+import Map from '@/components/MapUniversal'
 import Personalisator from '@/components/Personalisator'
 
 const Container = styled.div`
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           Topograhic contour map generator
         </h1>
 
-        <Map />
+        <Map center={[47.503802, 19.031654]}/>
         <Personalisator />
 
         <p>
