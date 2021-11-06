@@ -22,6 +22,7 @@ const Map = (props: Props) => {
 
   return (
     <Container
+      tap={false}
       center={props.center}
       zoom={13}
       scrollWheelZoom={false}
