@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Topographic contour map generator</title>
         <meta name="description" content="Generate SVG files using custom hue range and sampling levels" />
-        { /* @TODO: <link rel="icon" href="/favicon.ico" /> */ }
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Main>
