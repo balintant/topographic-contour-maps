@@ -1,6 +1,6 @@
-import { LatLngExpression, Icon, LatLngBounds, LeafletEventHandlerFnMap } from "leaflet";
-import React, { useEffect, useState } from "react";
-import { useMapEvents, Marker, Popup, Rectangle  } from "react-leaflet";
+import { LatLngExpression, Icon, LatLngBounds, LeafletEventHandlerFnMap } from "leaflet"
+import React, { useEffect, useState } from "react"
+import { useMapEvents, Marker, Popup, Rectangle  } from "react-leaflet"
 
 // Builtin default image src paths are broken, can't live without this.
 const DefaultMarker = new Icon({
@@ -44,22 +44,23 @@ const MapRectSelector = ({ onSelect }: Props) => {
 
   useEffect(() => {
     notify(markers)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [markers])
 
   const getHandlers = (index: number) => ({
     dragend: (e) => {
-      setIsDragging(false);
+      setIsDragging(false)
       // TODO: Can this be obtained differently? Using internal prop is not ideal.
-      updateMarker(e.target._latlng, index);
+      updateMarker(e.target._latlng, index)
     },
     dragstart: () => {
-      setIsDragging(true);
+      setIsDragging(true)
     },
   } as LeafletEventHandlerFnMap)
 
   useMapEvents({
     click: (e) => { pushMarker(e.latlng) },
-  });
+  })
 
   return markers.length < 1 ? <></> : <>
     {markers.map((marker, i) => (

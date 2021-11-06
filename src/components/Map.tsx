@@ -10,6 +10,7 @@ const Container = styled(MapContainer)`
 
 type Props = {
   center: LatLngExpression
+  onSelect?: (bounds?: LatLngBounds) => void
 }
 
 /**
@@ -17,7 +18,7 @@ type Props = {
  */
 const Map = (props: Props) => {
   const copyright = '&copy; '
-    + '<a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors';
+    + '<a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 
   return (
     <Container
@@ -29,7 +30,7 @@ const Map = (props: Props) => {
         attribution={copyright}
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <MapRectSelector />
+      <MapRectSelector onSelect={props.onSelect} />
     </Container>
   )
 }

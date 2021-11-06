@@ -3,6 +3,8 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import Map from '@/components/MapUniversal'
 import Personalisator from '@/components/Personalisator'
+import { LatLngBounds } from 'leaflet'
+import { useState } from 'react'
 
 const Container = styled.div`
   margin: auto;
@@ -18,6 +20,8 @@ const Footer = styled.footer`
 `
 
 const Home: NextPage = () => {
+  const [bounds, setBounds] = useState<LatLngBounds | undefined>()
+
   return (
     <Container>
       <Head>
@@ -31,8 +35,13 @@ const Home: NextPage = () => {
           Topograhic contour map generator
         </h1>
 
-        <Map center={[47.503802, 19.031654]}/>
+        <Map
+          center={[47.503802, 19.031654]}
+          onSelect={(bounds: LatLngBounds) => { setBounds(bounds) }}
+          />
         <Personalisator />
+
+        <p>Your coordinates: {bounds ? bounds.toBBoxString() : '[please select on the map first]'}</p>
 
         <p>
           @TODO: Credits.
