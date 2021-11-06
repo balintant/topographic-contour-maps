@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
         <Map
           center={[47.503802, 19.031654]}
-          onSelect={(bounds: LatLngBounds) => { setBounds(bounds) }}
+          onSelect={(bounds?: LatLngBounds) => { setBounds(bounds) }}
           />
         <Personalisator />
 

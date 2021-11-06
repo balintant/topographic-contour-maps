@@ -1,7 +1,6 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "semi": ["warn", "never"],
-    "no-unused-vars": ["warn", { "vars": "all"}]
+    "semi": ["warn", "never"]
   }
 }

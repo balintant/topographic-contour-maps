@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { MapContainer, TileLayer } from 'react-leaflet'
-import { LatLngExpression } from 'leaflet'
+import { LatLngBounds, LatLngExpression } from 'leaflet'
 import MapRectSelector from './MapRectSelector'
 
 const Container = styled(MapContainer)`
